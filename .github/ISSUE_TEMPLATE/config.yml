@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Something private
+    url: mailto:feedback@praxamark.com?subject=Praxamark%20feedback
+    about: A problem or an idea you would rather not post in public goes by email to feedback@praxamark.com.
+  - name: Security reports, licences and business
+    url: mailto:praxamark@identitypraxis.com?subject=Praxamark
+    about: Security reports are answered within two business days. Licences, partnerships and anything for the company go here too.
+  - name: Praxamark
+    url: https://praxamark.com/
+    about: What Praxamark is. Help is inside the extension (Support).

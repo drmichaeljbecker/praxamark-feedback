@@ -1,0 +1,91 @@
+name: Report a problem
+description: Something did not do what Help says it does.
+title: "[Problem] "
+labels: ["problem", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. Search the open issues first; if yours is there, add a comment rather than a new issue.
+        **Everything you write here is public.** Anything private (a page you cannot name, a clip that shows personal material) goes by email instead: feedback@praxamark.com. Security concerns go to praxamark@identitypraxis.com.
+  - type: textarea
+    id: context
+    attributes:
+      label: What you were doing
+      description: Who you are and what you were in the middle of, in one line. It tells us how much the problem matters and to whom.
+      placeholder: "As a lecturer preparing a reading list, posting an article to Zotero from the popup."
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: About in the extension shows it (top of the page, beside the name). The Feedback page fills this in for you.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      description: Which browser, and please add the version and operating system in the box below if you know them.
+      options:
+        - Google Chrome
+        - Microsoft Edge
+        - Brave
+        - Arc
+        - Other Chromium browser
+        - Firefox
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Browser version and operating system
+      placeholder: "Chrome 152 on macOS 27"
+  - type: input
+    id: page
+    attributes:
+      label: Page address
+      description: The page you were on, if the problem is about capture or the bar. It will be public; leave it blank if the page is private and say so below.
+      placeholder: "https://…"
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+      description: What Help or the tour led you to expect.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+      description: What you saw instead. The exact text of the result line or the toast matters; every failure names its step.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps
+      description: What you pressed, in order. Two or three lines is enough.
+      placeholder: |
+        1. Opened the popup on the page above
+        2. Pressed Add article, ticked Obsidian
+        3. Pressed Post
+  - type: input
+    id: destination
+    attributes:
+      label: Destination
+      description: If a post failed, which kind (twin, Obsidian, Tinderbox, Zotero, reference file, shared folder, email, clipboard).
+  - type: textarea
+    id: timing
+    attributes:
+      label: Timing line (for a slow popup)
+      description: |
+        Only for speed problems. Open the popup, then its console (chrome://extensions → Praxamark's card → Inspect views: popup, or right-click inside the popup → Inspect) and paste the line that begins `[Praxamark] opened in`. Report a problem from Praxamark's Feedback and the last open's line is filled in for you.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before filing
+      options:
+        - label: I reloaded the extension at chrome://extensions and reopened the popup (and reloaded the page) and the problem is still there.
+        - label: There is nothing private in what I pasted above.

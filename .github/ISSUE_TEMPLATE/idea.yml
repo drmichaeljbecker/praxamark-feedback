@@ -1,0 +1,87 @@
+name: Suggest an idea
+description: Something you were trying to do that Praxamark does not do, or does the long way.
+title: "[Idea] "
+labels: ["idea", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. Search the open issues first; an idea that is already there is best served by a comment saying how you would use it. Everything you write here is public.
+
+        The best requests read like a small story: **as a** (who you are), **in this situation** (what you were doing), **I would like to** (the capability), **because** (what it lets you do). One filled in:
+
+        > *As a* researcher, *in this situation* collecting quotes from three interviews for a chapter and posting to Tinderbox and Zotero at once, *I would like to* mark a passage as a quote and name its speaker without leaving the page, *because* the speaker is the thing I search for later, and typing it afterwards in two places means it often does not get done.
+
+        Ideas are read against Praxamark's principles: local first, and nothing sent anywhere you did not set up.
+  - type: dropdown
+    id: role
+    attributes:
+      label: As a…
+      description: Who is asking. It changes what a good answer looks like.
+      options:
+        - Researcher or academic
+        - Student
+        - Consultant or analyst
+        - Writer or journalist
+        - Team administrator
+        - Developer or integrator
+        - Other (say in the situation)
+    validations:
+      required: true
+  - type: textarea
+    id: situation
+    attributes:
+      label: …in this situation…
+      description: What you were doing, with which destinations. The task in your own words, not the solution.
+      placeholder: "Collecting quotes from three interviews for a chapter, posting to Tinderbox and Zotero at once."
+  - type: textarea
+    id: want
+    attributes:
+      label: …I would like to…
+      description: The capability, as you would use it. "Mark a passage as a quote and name its speaker without leaving the page."
+    validations:
+      required: true
+  - type: textarea
+    id: because
+    attributes:
+      label: …because…
+      description: What it would let you do, or stop doing. This is the part that tells us whether the idea is the answer or a symptom of something missing.
+      placeholder: "The speaker is what I search for later, and typing it afterwards in two places means it often does not get done."
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: How you would know it worked
+      description: One or two lines. What you would see, and where.
+      placeholder: "The quote note in Tinderbox carries the speaker's name, and the header's quotes list shows it."
+  - type: textarea
+    id: workaround
+    attributes:
+      label: What you do instead today
+      description: How you get it done without it, if you do.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where it belongs
+      options:
+        - The popup
+        - The bar on the page
+        - Elements (terms, people, entities, quotes)
+        - A destination (say which below)
+        - History and charts
+        - Settings or managed policy
+        - Brand packs
+        - Help, tour or What's new
+        - Not sure
+  - type: input
+    id: destination
+    attributes:
+      label: Destination, if any
+      placeholder: "Obsidian, Tinderbox, Zotero, a twin, …"
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: About shows it. The Feedback page fills this in for you.
+      placeholder: "1.0.0"
